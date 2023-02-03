@@ -3,19 +3,19 @@ package com.thomas.springapp.model;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Guitar implements Instrument{
+public class Banjo implements Instrument{
 
 	private String brand;
 	
-	public Guitar() {
+	public Banjo() {
 	}
 
-	public Guitar(String brand) {
+	public Banjo(String brand) {
 		this.brand = brand;
 	}
 
 	public void play() {
-		System.out.println(this.brand + ": Cling Cling Cling");
+		System.out.println(this.brand + ": Tigulingguiling");
 	}
 
 	public String getBrand() {

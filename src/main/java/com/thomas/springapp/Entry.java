@@ -13,16 +13,13 @@ public class Entry {
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:application-context.xml");
 		
-		Musicien m1 = (Guitarist) context.getBean("hx");
-		Musicien m2 = (Pianist) context.getBean("mz");
-		Musicien m3 = (Pianist) context.getBean("sh");
-		
-		Instrument p = context.getBean(Instrument.class);
+		Musicien m1 = (Guitarist) context.getBean("guitarist");
+		Musicien m2 = (Musicien) context.getBean("pianist");
 		
 		m1.playInstru();
 		m2.playInstru();
-		m3.playInstru();
 		
-		p.play();
+
+		
 	}
 }

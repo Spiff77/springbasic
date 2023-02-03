@@ -1,9 +1,16 @@
 package com.thomas.springapp.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Pianist implements Musicien{
 
 	private String name;
 	
+	@Autowired
+	@Qualifier("piano")
 	private Instrument instrument;
 	
 	public Pianist() {

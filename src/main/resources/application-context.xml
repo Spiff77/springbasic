@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:context="http://www.springframework.org/schema/context"
     xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="py" class="com.thomas.springapp.model.Piano">
-		<property name="brand" value="Yamaha"></property>
-	</bean>
-	
-	<bean id="gg" class="com.thomas.springapp.model.Guitar" primary="true">
-		<property name="brand" value="Gibson"></property>
-	</bean>
-	
-	<bean id="hx" class="com.thomas.springapp.model.Guitarist">
-		<property name="name" value="Hendrix"></property>
-		<property name="instrument" ref="gg"></property>
-	</bean>
-		
-	<bean id="mz" class="com.thomas.springapp.model.Pianist">
-		<property name="name" value="Mozart"></property>
-		<property name="instrument" ref="py"></property>
-	</bean>
-		
-	<bean id="sh" class="com.thomas.springapp.model.Pianist">
-		<property name="name" value="Schubert"></property>
-		<property name="instrument" ref="gg"></property>
-	</bean>
+	<context:component-scan base-package="com.thomas.springapp.model" />
 	
 </beans>

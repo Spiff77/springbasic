@@ -1,5 +1,8 @@
 package com.thomas.springapp.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Piano implements Instrument{
 
 	private String brand;
