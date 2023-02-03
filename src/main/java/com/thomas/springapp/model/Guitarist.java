@@ -1,7 +1,5 @@
 package com.thomas.springapp.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,12 +7,18 @@ public class Guitarist implements Musicien{
 
 	private String name;
 	
-	@Autowired
-	@Qualifier("banjo")
 	private Instrument instrument;
 	
 	public Guitarist() {
 	}
+	
+
+	public Guitarist(Instrument instrument) {
+		super();
+		this.instrument = instrument;
+	}
+
+
 
 	public void doSlam() {
 		System.out.println("Youhouuu");
@@ -40,6 +44,18 @@ public class Guitarist implements Musicien{
 	public void setInstrument(Instrument instrument) {
 		this.instrument = instrument;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Guitarist [name=");
+		builder.append(name);
+		builder.append(", instrument=");
+		builder.append(instrument);
+		return builder.toString();
+	}
+	
+	
 	
 	
 

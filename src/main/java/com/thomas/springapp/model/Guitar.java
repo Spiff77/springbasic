@@ -29,7 +29,7 @@ public class Guitar implements Instrument{
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Piano [brand=").append(brand).append("]");
+		builder.append("Guitar [brand=").append(brand).append("]");
 		return builder.toString();
 	}
 	

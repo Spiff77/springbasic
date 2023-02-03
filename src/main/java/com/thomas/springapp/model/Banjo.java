@@ -29,7 +29,7 @@ public class Banjo implements Instrument{
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Piano [brand=").append(brand).append("]");
+		builder.append("Banjo [brand=").append(brand).append("]");
 		return builder.toString();
 	}
 	
